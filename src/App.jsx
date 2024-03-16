@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import SingleProduct from './SingleProduct';
 import './App.css'
+import Header from './Header';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -17,64 +18,31 @@ function App() {
 
 
   const handleCart = (p) => {
-    const isExist = cart.find((pd) => pd.id == p.id);
+    const isExist = cart.find(item => item.id == p.id);
     if (!isExist) {
-      setCart([...cart,p])
+      setCart([...cart, p]);
     }
     else {
-      alert('You have already added this product');
+      alert("You have already added this product")
     }
+  };
+
+  const handleDelete = (id)=>{
+    const newCart = cart.filter(item => item.id != id);
+    setCart(newCart);
   }
+
+
+
+
   console.log(cart);
 
   return (
     <>
       <div className='container mx-auto my-10'>
         
-        
-      <div class="navbar bg-base-100">
-    <div class="flex-1">
-    <a class="btn btn-ghost text-3xl">Recipe Calories</a>
-  </div>
-  <div class="flex-none gap-2">
-    <div class="form-control">
-      <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-    </div>
-    <div class="dropdown dropdown-end">
-      <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
-        <div class="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </div>
-      </div>
-      <ul tabindex="0" class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-        <li>
-          <a class="justify-between">
-            Profile
-            <span class="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
-  </div>
-        </div>
-        
-
-      <div class="hero lg:h-[600px] my-10 bg-[url('../banner.jpg')]">
-  <div class="hero-overlay bg-opacity-60"></div>
-  <div class="hero-content text-center text-neutral-content">
-    <div class="max-w-3xl">
-      <h1 class="mb-5 text-5xl font-bold">Discover an exceptional cooking class tailored for you!</h1>
-              <p class="mb-5">Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.</p>
-              
-      <button class="btn btn-accent">Explore Now</button>
-      <button class="btn btn-neutral ml-4">Our Feedback</button>
       
-    </div>
-  </div>
-      </div>
-
+        <Header></Header>
 
         <div>
           
@@ -101,15 +69,36 @@ function App() {
             <div className='cart-container border-2 w-[40%]  rounded-xl p-4'>
             
               <div className='text-center my-8 p-4'>
-                <h3 className='font-bold text-xl'>Want to cook: 01</h3>
+                <h3 className='font-bold text-xl'>Want to cook: 1</h3>
               
-                <div className='cart-title flex justify-between my-4 items-center'>
+                <div className='cart-title flex justify-around my-4 items-center'>
                 <h5 className='font-bold text-lg'>Name</h5>
                 <h5 className='font-bold text-lg'>Time</h5>
-                 <h5 className='font-bold text-lg'>Price</h5>
-                 
+                 <h5 className='font-bold text-lg'>Calories</h5>
                 </div>
+
               
+          <div className='space-y-2'>
+                  {cart.map((item, index) => (
+                    <div className="cart-info flex justify-around items-center">
+                      <p>{index+1}</p>
+                      <h5>{item.recipe_name.slice(0,12)}</h5>
+                      <h5>{item.preparing_time}</h5>
+                      <h5>{item.calories}</h5>
+                      <button onClick={()=>handleDelete(item.id)} className='btn btn-accent'>Preparing</button>
+                    </div>
+             ))}
+                  
+           </div>
+
+                <h3 className='my-6 font-bold text-xl'>Currently cooking: 01</h3>
+                <div className='cart-title flex justify-around  items-center'>
+                <h5 className='font-bold text-lg'>Name</h5>
+                <h5 className='font-bold text-lg'>Time</h5>
+                 <h5 className='font-bold text-lg'>Calories</h5>
+                </div>
+                
+                
               </div>
               
               

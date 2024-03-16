@@ -1,7 +1,7 @@
 [
     {
       "recipe_image": "https://images.pexels.com/photos/15532964/pexels-photo-15532964/free-photo-of-photo-of-a-chicken-breast-meal.jpeg",
-      "recipe_id": 1,
+      "id": 1,
       "recipe_name": "Chicken Stir Fry",
       "short_description": "A delicious and healthy chicken stir fry with colorful vegetables.",
       "ingredients": [
@@ -19,7 +19,7 @@
     },
     {
       "recipe_image": "https://images.pexels.com/photos/4518836/pexels-photo-4518836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "recipe_id": 2,
+      "id": 2,
       "recipe_name": "Spaghetti Carbonara",
       "short_description": "Classic Italian pasta dish with creamy sauce and crispy bacon.",
       "ingredients": [
@@ -36,7 +36,7 @@
     },
     {
       "recipe_image": "https://images.pexels.com/photos/674574/pexels-photo-674574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "recipe_id": 3,
+      "id": 3,
       "recipe_name": "Vegetable Curry",
       "short_description": "A fragrant and spicy vegetable curry with a variety of colorful veggies.",
       "ingredients": [
@@ -56,7 +56,7 @@
     },
     {
       "recipe_image": "https://images.pexels.com/photos/1213710/pexels-photo-1213710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "recipe_id": 4,
+      "id": 4,
       "recipe_name": "Greek Salad",
       "short_description": "A refreshing salad with crisp vegetables and tangy feta cheese.",
       "ingredients": [
@@ -76,7 +76,7 @@
     },
     {
       "recipe_image": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "recipe_id": 5,
+      "id": 5,
       "recipe_name": "Chocolate Cake",
       "short_description": "Indulgent and moist chocolate cake perfect for any occasion.",
       "ingredients": [
@@ -98,7 +98,7 @@
     },
     {
       "recipe_image": "https://images.pexels.com/photos/1351238/pexels-photo-1351238.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "recipe_id": 6,
+      "id": 6,
       "recipe_name": "Avocado Toast",
       "short_description": "A simple yet delicious avocado toast with a sprinkle of seasoning.",
       "ingredients": [
